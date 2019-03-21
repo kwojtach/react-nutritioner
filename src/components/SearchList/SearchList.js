@@ -2,17 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 
+import classes from './SearchList.scss';
+
 class SearchList extends Component {
   render() {
     return (
-      <ul>
-        {this.props.searchingMode ? this.props.searchedFoodList.map(food => {
-          return (
-            <li key={food.offset} onClick={() => this.props.onFoodClicked(food.ndbno)}>
-              {food.name}
-            </li>)
-        }) : null}
-      </ul>
+      <section className={classes.SearchList}>
+        <ul>
+          {this.props.searchingMode ? this.props.searchedFoodList.map(food => {
+            return (
+              <li key={food.offset} onClick={() => this.props.onFoodClicked(food.ndbno)}>
+                <h3>{food.name}</h3>
+              </li>)
+          }) : null}
+        </ul>
+      </section>
     );
   }
 }

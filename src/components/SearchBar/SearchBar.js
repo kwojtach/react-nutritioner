@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 
+import classes from './SearchBar.scss';
+
 class SearchBar extends Component {
   state = {
     searchedFood: ''
@@ -16,7 +18,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <form onSubmit={(event) => this.props.onSearchFood(event, this.state.searchedFood)}>
+      <form className={classes.SearchBar} onSubmit={(event) => this.props.onSearchFood(event, this.state.searchedFood)}>
         <input
           value={this.state.searchedFood}
           onChange={(event) => this.onInputChangeHandler(event)}
