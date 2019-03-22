@@ -3,3 +3,4 @@ package-lock.json
 build/
 yarn.lock
 src/config.js
+.idea
