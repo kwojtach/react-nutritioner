@@ -31,7 +31,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onFoodClicked: (food_id) => dispatch(actions.loadFoodDetails(food_id))
+    onFoodClicked: (food_id) => dispatch(actions.fetchFoodDetails(food_id))
   }
 };
 

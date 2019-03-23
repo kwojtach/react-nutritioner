@@ -13,7 +13,6 @@ class SearchBar extends Component {
     this.setState({
       searchedFood: event.target.value
     });
-    console.log(this.state.searchedFood);
   };
 
   render() {

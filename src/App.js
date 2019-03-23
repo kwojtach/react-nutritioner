@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Layout from './components/Layout/Layout';
 import Header from './components/Header/Header';
 import SearchList from './components/SearchList/SearchList';
-import FoodSection from './containers/FoodDetails/FoodDetails';
+import FoodSection from './containers/FoodDescription/FoodDescription';
 
 class App extends Component {
   render() {

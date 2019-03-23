@@ -1,4 +1,4 @@
 export {
   searchFood,
-  loadFoodDetails
+  fetchFoodDetails
 } from './search';

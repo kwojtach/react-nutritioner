@@ -17,28 +17,44 @@ export const searchFood = (event, food) => {
       .then(response => {
         if (response.data.errors) {
           // handle error
-          console.log(response.data.errors.error[0].message);
         } else {
-          console.log(response.data.list.item);
           dispatch(searchFoodSuccess(response.data.list.item));
         }
       }).catch(error => console.error(error));
   };
 };
 
-export const loadFoodDetailsSuccess = (food) => {
+export const fetchFoodDetailsSuccess = (food) => {
   return {
-    type: actionTypes.LOAD_FOOD_DETAILS_SUCCESS,
+    type: actionTypes.FETCH_FOOD_DETAILS_SUCCESS,
     foodDetails: food
   }
 };
 
-export const loadFoodDetails = (food_id) => {
+export const fetchFoodDetails = (food_id) => {
   return dispatch => {
     axios.get(`reports/?ndbno=${food_id}&format=json&api_key=${key}`)
       .then(response => {
-        console.log(response.data.report.food);
-        dispatch(loadFoodDetailsSuccess(response.data.report.food));
+        const food = {
+          name: response.data.report.food.name,
+          proximates: [],
+          proximatesValues: [], // Add constant proximatesValues to calculate the plan later
+          minerals: []
+        };
+        // Create an array with IDs to target specific proximates and minerals
+        // e.g. for protein ID = '203';
+        const proxAndMins = ['208', '203', '204', '205',    // Proximates e.g. protein
+          '301', '303', '304', '305', '306', '307', '309'];   // Minerals e.g. calcium
+        let nutrients = response.data.report.food.nutrients.filter(el => proxAndMins.includes(el.nutrient_id));
+
+        food.proximates = nutrients.slice(0, 4);
+        food.minerals = nutrients.slice(4);
+
+        food.proximates.forEach(el => {
+          food.proximatesValues.push(el.value);
+        });
+        console.log(food);
+        dispatch(fetchFoodDetailsSuccess(food));
       })
       .catch(error => console.error(error));
   }

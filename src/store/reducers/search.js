@@ -14,7 +14,7 @@ const reducer = (state = initialState, action) => {
         searchedFoodList: action.searchedFoodList,
         searchingMode: action.searchingMode
       };
-    case (actionTypes.LOAD_FOOD_DETAILS_SUCCESS):
+    case (actionTypes.FETCH_FOOD_DETAILS_SUCCESS):
       return {
         ...state,
         foodDetails: action.foodDetails
