@@ -1,0 +1,35 @@
+.FoodDetails {
+  width: 100%;
+  border-spacing: initial;
+
+  thead {
+    th {
+      background-color: lightskyblue;
+      font-weight: 400;
+      font-size: 2rem;
+      padding: .7rem .5rem;
+    }
+  }
+
+  tbody {
+    td {
+      font-size: 1.5rem;
+      padding: .7rem .5rem;
+    }
+  }
+
+  tr {
+    &:nth-child(2n) {
+      background-color: #ddd;
+    }
+
+    th:first-of-type,
+    td:first-of-type{
+      text-align: left;
+    }
+    th:nth-last-of-type(1),
+    td:nth-last-of-type(1) {
+      text-align: right;
+    }
+  }
+}
