@@ -14,9 +14,9 @@ const foodDetails = (props) => {
         </thead>
         <tbody>
         { props.details.proximates.map(proximate =>
-          <tr>
-            <td>{proximate.name} {proximate.name.slice(0,1)}</td>
-            <td>{proximate.value} {proximate.unit}</td>
+          <tr key={proximate.nutrient_id}>
+            <td>{proximate.name} ({proximate.name.slice(0,1)})</td>
+            <td>{proximate.value} ({proximate.unit})</td>
           </tr>) }
         </tbody>
       </table>
@@ -29,9 +29,9 @@ const foodDetails = (props) => {
         </thead>
         <tbody>
         { props.details.minerals.map(mineral =>
-          <tr>
-            <td>{mineral.name} {mineral.name.slice(0,1)}</td>
-            <td>{mineral.value} {mineral.unit}</td>
+          <tr key={mineral.nutrient_id}>
+            <td>{mineral.name} ({mineral.name.slice(0,1)})</td>
+            <td>{mineral.value} ({mineral.unit})</td>
           </tr>) }
         </tbody>
       </table>

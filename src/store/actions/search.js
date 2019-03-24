@@ -53,7 +53,6 @@ export const fetchFoodDetails = (food_id) => {
         food.proximates.forEach(el => {
           food.proximatesValues.push(el.value);
         });
-        console.log(food);
         dispatch(fetchFoodDetailsSuccess(food));
       })
       .catch(error => console.error(error));

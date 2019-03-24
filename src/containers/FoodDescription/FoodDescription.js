@@ -9,13 +9,26 @@ import * as actions from '../../store/actions/index';
 import classes from './FoodDescription.scss';
 
 class FoodDescription extends Component {
+  state = {
+    foodWeight: 100
+  };
+
+  onFoodWeightChangeHandler = (event) => {
+    this.setState({
+      foodWeight: event.target.value
+    });
+  };
+
   render() {
     return (
       <section className={classes.FoodDescription}>
         { this.props.foodDetails ?
           <>
             <FoodTitle title={this.props.foodDetails.name}/>
-            <FoodAdder/>
+            <FoodAdder
+              weight={this.state.foodWeight}
+              onChangeWeight={this.onFoodWeightChangeHandler}
+            />
             <FoodDetails details={this.props.foodDetails}/>
           </>
           : <Intro/> }
