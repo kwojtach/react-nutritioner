@@ -3,7 +3,7 @@
   background-color: #eee;
   border-bottom-left-radius: 10px;
 
-  ul {
+  .FoodList {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -23,6 +23,19 @@
         text-transform: uppercase;
         margin: 0;
       }
+    }
+  }
+
+  .NumbersList {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      font-size: 2.5rem;
+      cursor: pointer;
     }
   }
 }
