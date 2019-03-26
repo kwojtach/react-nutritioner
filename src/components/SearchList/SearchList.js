@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
-import ReactPaginate from 'react-paginate';
+import Pagination from './Pagination/Pagination';
 
 import classes from './SearchList.scss';
+import activeClass from './Pagination/Pagination.scss';
+
 
 class SearchList extends Component {
   state = {
@@ -12,8 +14,10 @@ class SearchList extends Component {
   };
 
   onHandlePageChange = (event) => {
+    document.getElementById(this.state.currentPage).classList.remove(activeClass.Active);
+    event.currentTarget.classList.add(activeClass.Active);
     this.setState({
-      currentPage: event.target.id
+      currentPage: event.currentTarget.id
     });
   };
 
@@ -48,22 +52,17 @@ class SearchList extends Component {
               {currentFoods.map(food => {
                 return (
                   <li key={food.offset} onClick={() => this.props.onFoodClicked(food.ndbno)}>
-                    <h3>{limitFoodName(food.name)}</h3>
+                    <a href="javascript:void(0);">
+                      <h3>{limitFoodName(food.name)}</h3>
+                    </a>
                   </li>)
               })}
             </ul>
-            <ul className={classes.NumbersList}>
-              {pageNumbers.map(number => {
-                return (
-                  <li
-                    key={number}
-                    id={number}
-                    onClick={(event) => this.onHandlePageChange(event)}
-                  >{number}
-                  </li>
-                );
-              })}
-            </ul>
+            {pageNumbers.length > 1 ? <Pagination
+              currentPage={this.state.currentPage}
+              pageNumbers={pageNumbers}
+              onPageChange={this.onHandlePageChange}
+            /> : null}
           </> : null}
       </section>
     );

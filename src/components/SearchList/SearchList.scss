@@ -10,11 +10,25 @@
 
     li {
       border-bottom: 2px solid #fff;
-      padding: 1.6rem 1rem;
-      transition: all .2s;
-      &:hover {
-        cursor: pointer;
-        background-color: #fff;
+      padding: 0;
+
+      a {
+        height: 3rem;
+
+        &:link,
+        &:visited {
+          padding: 1.6rem 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-decoration: none;
+          color: inherit;
+          transition: all .2s;
+        }
+
+        &:hover {
+          background-color: #fff;
+        }
       }
 
       h3 {
@@ -23,19 +37,6 @@
         text-transform: uppercase;
         margin: 0;
       }
-    }
-  }
-
-  .NumbersList {
-    list-style: none;
-    margin: 0;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-
-    li {
-      font-size: 2.5rem;
-      cursor: pointer;
     }
   }
 }

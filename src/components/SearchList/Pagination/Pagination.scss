@@ -1,0 +1,19 @@
+.Pagination {
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+  }
+
+  .Active {
+    border: 2px solid lightskyblue;
+  }
+}
