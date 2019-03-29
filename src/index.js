@@ -7,9 +7,11 @@ import thunk from 'redux-thunk';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import searchReducer from './store/reducers/search';
+import planReducer from './store/reducers/plan';
 
 const rootReducer = combineReducers({
-  search: searchReducer
+  search: searchReducer,
+  plan: planReducer
 });
 const store = createStore(rootReducer, applyMiddleware(thunk));
 

@@ -19,6 +19,10 @@ class FoodDescription extends Component {
     });
   };
 
+  onAddFoodToPlan = (event, food, weight) => {
+    this.props.onAddFood(event, food, weight)
+  };
+
   render() {
     return (
       <section className={classes.FoodDescription}>
@@ -27,7 +31,9 @@ class FoodDescription extends Component {
             <FoodTitle title={this.props.foodDetails.name}/>
             <FoodAdder
               weight={this.state.foodWeight}
+              food={this.props.foodDetails}
               onChangeWeight={this.onFoodWeightChangeHandler}
+              onAddFood={this.onAddFoodToPlan}
             />
             <FoodDetails details={this.props.foodDetails}/>
           </>
@@ -43,4 +49,10 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(FoodDescription);
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddFood: (event, food, weight) => dispatch(actions.addFoodToPlan(event, food, weight))
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodDescription);

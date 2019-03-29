@@ -1,79 +1,81 @@
 .FoodPlan {
-  width: 100%;
-  border-spacing: initial;
+  table {
+    width: 100%;
+    border-spacing: initial;
 
-  thead {
-    th {
-      background-color: lightskyblue;
-      font-weight: 400;
-      font-size: 2rem;
-      padding: 1.2rem .7rem;
+    thead {
+      th {
+        background-color: lightskyblue;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: 1.2rem .7rem;
+      }
     }
-  }
 
-  tbody {
-    td {
+    tbody {
+      td {
+        font-size: 1.5rem;
+        padding: 1.2rem .7rem;
+      }
+    }
+
+    tr {
+      &:nth-child(2n) {
+        background-color: #ddd;
+      }
+
+      th,
+      td{
+        text-align: right;
+      }
+      th:first-of-type,
+      td:first-of-type{
+        text-align: left;
+      }
+    }
+
+    input {
+      height: 3rem;
+      width: 7.2rem;
       font-size: 1.5rem;
-      padding: 1.2rem .7rem;
-    }
-  }
+      border: none;
+      color: inherit;
+      background-color: #eee;
+      text-align: center;
+      border-radius: 10rem;
+      transition: all .2s;
 
-  tr {
-    &:nth-child(2n) {
-      background-color: #ddd;
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2.5rem rgba(black, 0.2);
+      }
     }
 
-    th,
-    td{
-      text-align: right;
+    button,
+    button:link,
+    button:visited {
+      font-size: 1.5rem;
+      background-color: lightskyblue;
+      border: none;
+      color: #eee;
+      text-transform: uppercase;
+      cursor: pointer;
+      align-items: center;
+      transition: all .2s;
+      height: 3rem;
+      width: 3rem;
+      padding: .7rem .5rem;
+      border-radius: 50%;
+      justify-content: center;
+      display: inline-block;
     }
-    th:first-of-type,
-    td:first-of-type{
-      text-align: left;
+
+    button:hover {
+      background-color: blue;
     }
-  }
 
-  input {
-    height: 3rem;
-    width: 7.2rem;
-    font-size: 1.5rem;
-    border: none;
-    color: inherit;
-    background-color: #eee;
-    text-align: center;
-    border-radius: 10rem;
-    transition: all .2s;
-
-    &:focus {
+    button:focus {
       outline: none;
-      box-shadow: 0 1rem 2.5rem rgba(black, 0.2);
     }
-  }
-
-  button,
-  button:link,
-  button:visited {
-    font-size: 1.5rem;
-    background-color: lightskyblue;
-    border: none;
-    color: #eee;
-    text-transform: uppercase;
-    cursor: pointer;
-    align-items: center;
-    transition: all .2s;
-    height: 3rem;
-    width: 3rem;
-    padding: .7rem .5rem;
-    border-radius: 50%;
-    justify-content: center;
-    display: inline-block;
-  }
-
-  button:hover {
-    background-color: blue;
-  }
-
-  button:focus {
-    outline: none;
   }
 }

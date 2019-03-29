@@ -36,6 +36,7 @@ export const fetchFoodDetails = (food_id) => {
     axios.get(`reports/?ndbno=${food_id}&format=json&api_key=${key}`)
       .then(response => {
         const food = {
+          id: response.data.report.food.ndbno,
           name: response.data.report.food.name,
           proximates: [],
           proximatesValues: [], // Add constant proximatesValues to calculate the plan later
@@ -53,6 +54,7 @@ export const fetchFoodDetails = (food_id) => {
         food.proximates.forEach(el => {
           food.proximatesValues.push(el.value);
         });
+        console.log(food);
         dispatch(fetchFoodDetailsSuccess(food));
       })
       .catch(error => console.error(error));
