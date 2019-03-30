@@ -8,3 +8,11 @@ export const addFoodToPlan = (event, food, weight) => {
     weight: weight
   }
 };
+
+export const calculateFood = (foodId, event) => {
+  return {
+    type: actionTypes.CALCULATE_FOOD,
+    newWeight: event.target.value,
+    foodId: foodId
+  }
+};

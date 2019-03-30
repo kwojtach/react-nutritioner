@@ -3,5 +3,6 @@ export {
   fetchFoodDetails
 } from './search';
 export {
-  addFoodToPlan
+  addFoodToPlan,
+  calculateFood
 } from './plan';

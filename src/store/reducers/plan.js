@@ -10,15 +10,29 @@ const reducer = (state = initialState, action) => {
       const food = {
         id: action.food.id,
         name: action.food.name,
-        proximates: [...action.food.proximates],
+        proximates: action.food.proximates.map(proximate => proximate.value),
         proximatesValues: [...action.food.proximatesValues],
         weight: action.weight,
         key: action.food.id
       };
 
-      console.log(food)
       return {
         foodPlan: [food, ...state.foodPlan]
+      };
+    case (actionTypes.CALCULATE_FOOD):
+      const foodCalculated = state.foodPlan.find(food => food.id === action.foodId);
+      foodCalculated.weight = action.newWeight;
+      foodCalculated.proximates = foodCalculated.proximates.map((proximate, index) => {
+          return (Math.ceil(parseFloat(foodCalculated.proximatesValues[index]) * parseFloat(action.newWeight))) / 100
+        }
+      );
+
+      const plan = state.foodPlan.map(food => {
+        return food.id === action.foodId ? foodCalculated : food
+      });
+
+      return {
+        foodPlan: plan
       };
     default:
       return state

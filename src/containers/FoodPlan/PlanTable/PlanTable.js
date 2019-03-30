@@ -16,13 +16,18 @@ const planTable = (props) => {
       <tbody>
       {props.foodPlan.map(food => {
         return (
-          <tr key={food.id}>
+          <tr key={food.name}>
             <td>{food.name}</td>
             <td>
-              <input value={food.weight} type="number" min="1" onChange={food.weight = 100}/>
+              <input
+                value={food.weight}
+                type="number"
+                onChange={(event) => props.calculateFood(food.id, event)}
+                min="1"
+              />
               <button>X</button>
             </td>
-            {food.proximatesValues.map(proximate => {
+            {food.proximates.map(proximate => {
               return (
                 <td key={proximate}>{proximate}</td>
               )
