@@ -9,12 +9,11 @@ class FoodPlan extends Component {
   render() {
     return (
       <section className={classes.FoodPlan}>
-        {this.props.foodPlan ?
+        {this.props.foodPlan.length ?
           <PlanTable
             foodPlan={this.props.foodPlan}
             calculateFood={this.props.calculateFood}
-          />
-           : null}
+          /> : null}
       </section>
     );
   };
