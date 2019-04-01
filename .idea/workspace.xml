@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7af20814-e4d4-453e-b890-0f98c0981d73" name="Default Changelist" comment="">
+    <list default="true" id="7af20814-e4d4-453e-b890-0f98c0981d73" name="Default Changelist" comment="fixed a bug when">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/plan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/plan.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="466">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -29,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodAdder/FoodAdder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <caret line="10" column="49" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -43,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="224">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -58,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/FoodPlan/PlanTable/PlanTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="175">
+              <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -67,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/reducers/plan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="748">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -76,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/actions/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="997">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="659">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -111,6 +112,10 @@
       <find>key</find>
       <find>console</find>
       <find>console.log</find>
+      <find>key=</find>
+      <find>calculate</find>
+      <find>calculateFood</find>
+      <find>onFoodWeightChangeHandler</find>
     </findStrings>
     <dirStrings>
       <dir>C:\nauka\react-nutritioner</dir>
@@ -164,16 +169,16 @@
         <option value="$PROJECT_DIR$/src/containers/FoodDescription/FoodDetails/Table/Table.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js" />
         <option value="$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.scss" />
         <option value="$PROJECT_DIR$/src/store/actions/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/actions/index.js" />
         <option value="$PROJECT_DIR$/src/containers/FoodDescription/FoodAdder/FoodAdder.js" />
         <option value="$PROJECT_DIR$/src/store/actions/plan.js" />
-        <option value="$PROJECT_DIR$/src/containers/FoodPlan/PlanTable/PlanTable.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/plan.js" />
         <option value="$PROJECT_DIR$/src/store/actions/search.js" />
         <option value="$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/plan.js" />
+        <option value="$PROJECT_DIR$/src/containers/FoodPlan/PlanTable/PlanTable.js" />
+        <option value="$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js" />
       </list>
     </option>
   </component>
@@ -396,7 +401,8 @@
       <workItem from="1553885015678" duration="4472000" />
       <workItem from="1553936895702" duration="200000" />
       <workItem from="1553946717090" duration="5963000" />
-      <workItem from="1554026058686" duration="51000" />
+      <workItem from="1554026058686" duration="791000" />
+      <workItem from="1554146061372" duration="1185000" />
     </task>
     <task id="LOCAL-00001" summary="header styles added">
       <created>1553107858108</created>
@@ -468,17 +474,24 @@
       <option name="project" value="LOCAL" />
       <updated>1553952684949</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed a bug whether to show a food plan or not">
+      <created>1554026252660</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1554026252660</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90893000" />
+    <option name="totallyTimeSpent" value="92818000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23691276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24200426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -492,7 +505,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18696883" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18634886" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Quokka" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
@@ -516,7 +529,8 @@
     <MESSAGE value="add food to plan action added to reducer and food plan list adjusted to this action" />
     <MESSAGE value="plan table moved to new component and key property added to plan foods" />
     <MESSAGE value="calculate plan food action added to reducer and to plan table" />
-    <option name="LAST_COMMIT_MESSAGE" value="calculate plan food action added to reducer and to plan table" />
+    <MESSAGE value="fixed a bug whether to show a food plan or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed a bug whether to show a food plan or not" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/manifest.json">
@@ -720,20 +734,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actions/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        <state relative-caret-position="659">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodAdder/FoodAdder.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="224">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -746,32 +763,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/FoodPlan/PlanTable/PlanTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="175">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodAdder/FoodAdder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/plan.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        <state relative-caret-position="748">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/search.js">
+    <entry file="file://$PROJECT_DIR$/src/containers/FoodDescription/FoodDescription.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="997">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/FoodPlan/FoodPlan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="466">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

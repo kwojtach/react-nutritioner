@@ -14,9 +14,11 @@ class FoodDescription extends Component {
   };
 
   onFoodWeightChangeHandler = (event) => {
-    this.setState({
-      foodWeight: event.target.value
-    });
+    if (event.target.value > 0) {
+      this.setState({
+        foodWeight: event.target.value
+      });
+    }
   };
 
   onAddFoodToPlan = (event, food, weight) => {

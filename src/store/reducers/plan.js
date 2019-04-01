@@ -21,11 +21,13 @@ const reducer = (state = initialState, action) => {
       };
     case (actionTypes.CALCULATE_FOOD):
       const foodCalculated = state.foodPlan.find(food => food.id === action.foodId);
-      foodCalculated.weight = action.newWeight;
+      if (action.newWeight > 0) {
+        foodCalculated.weight = action.newWeight;
+      } else return {...state };
+
       foodCalculated.proximates = foodCalculated.proximates.map((proximate, index) => {
-          return (Math.ceil(parseFloat(foodCalculated.proximatesValues[index]) * parseFloat(action.newWeight))) / 100
-        }
-      );
+        return (Math.ceil(parseFloat(foodCalculated.proximatesValues[index]) * parseFloat(action.newWeight))) / 100
+      });
 
       const plan = state.foodPlan.map(food => {
         return food.id === action.foodId ? foodCalculated : food
