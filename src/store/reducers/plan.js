@@ -1,7 +1,11 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-  foodPlan: []
+  foodPlan: [],
+  summary: {
+    weight: 0,
+    proximates: [0,0,0,0]
+  }
 };
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +25,7 @@ const reducer = (state = initialState, action) => {
       };
 
       return {
+        ...state,
         foodPlan: [food, ...state.foodPlan]
       };
     case (actionTypes.CALCULATE_FOOD):
@@ -37,7 +42,25 @@ const reducer = (state = initialState, action) => {
       });
 
       return {
+        ...state,
         foodPlan: plan
+      };
+    case (actionTypes.CALCULATE_FOOD_PLAN):
+      const planWeight = state.foodPlan.reduce(((total, food) => total + parseFloat(food.weight)), 0);
+      const proximatesWeight = [0,0,0,0];
+      state.foodPlan.map(food => {
+
+      });
+      proximatesWeight.forEach((weight, index) => {
+        state.foodPlan.map(food => proximatesWeight[index] += parseFloat(food.proximates[index]))
+      });
+
+      return {
+        ...state,
+        summary: {
+          weight: planWeight,
+          proximates: proximatesWeight
+        }
       };
     default:
       return state

@@ -4,5 +4,5 @@ export {
 } from './search';
 export {
   addFoodToPlan,
-  calculateFood
+  calculateFood,
 } from './plan';

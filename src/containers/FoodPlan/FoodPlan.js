@@ -12,6 +12,7 @@ class FoodPlan extends Component {
         {this.props.foodPlan.length ?
           <PlanTable
             foodPlan={this.props.foodPlan}
+            summary={this.props.planSummary}
             calculateFood={this.props.calculateFood}
           /> : null}
       </section>
@@ -21,7 +22,8 @@ class FoodPlan extends Component {
 
 const mapStateToProps = state => {
   return {
-    foodPlan: state.plan.foodPlan
+    foodPlan: state.plan.foodPlan,
+    planSummary: state.plan.summary
   }
 };
 

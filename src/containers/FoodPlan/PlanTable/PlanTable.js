@@ -1,6 +1,7 @@
 import React from 'react';
 
 const planTable = (props) => {
+  console.log(props.summary);
   return (
     <table>
       <thead>
@@ -35,6 +36,15 @@ const planTable = (props) => {
           </tr>
         )
       })}
+        <tr>
+          <td>Summary</td>
+          <td>{props.summary.weight}</td>
+          {props.summary.proximates.map((proximate, index) => {
+            return (
+              <td key={index}>{proximate}</td>
+            )
+          })}
+        </tr>
       </tbody>
     </table>
   )
