@@ -42,7 +42,7 @@ const planTable = (props) => {
           <td>{props.summary.weight}</td>
           {props.summary.proximates.map((proximate, index) => {
             return (
-              <td key={index}>{proximate}</td>
+              <td key={index}>{proximate.toFixed(2)}</td>
             )
           })}
         </tr>
