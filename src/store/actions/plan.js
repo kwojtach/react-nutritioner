@@ -26,3 +26,21 @@ export const calculateFood = (foodId, event) => {
     })
   };
 };
+
+export const deleteFood = (foodId) => {
+  return function(dispatch) {
+    dispatch({
+      type: actionTypes.DELETE_FOOD,
+      foodId: foodId
+    });
+    dispatch({
+      type: actionTypes.CALCULATE_FOOD_PLAN
+    })
+  };
+};
+
+export const deletePlan = () => {
+  return {
+    type: actionTypes.DELETE_PLAN
+  }
+};

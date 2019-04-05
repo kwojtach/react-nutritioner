@@ -54,6 +54,7 @@
     button,
     button:link,
     button:visited {
+      margin: 0;
       font-size: 1.5rem;
       background-color: lightskyblue;
       border: none;
@@ -77,5 +78,31 @@
     button:focus {
       outline: none;
     }
+  }
+
+  button,
+  button:link,
+  button:visited {
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    background-color: lightskyblue;
+    border-radius: 10rem;
+    border: none;
+    color: #eee;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+  }
+
+  button:hover {
+    background-color: blue;
+  }
+
+  button:focus {
+    outline: none;
   }
 }

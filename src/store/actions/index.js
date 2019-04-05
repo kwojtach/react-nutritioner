@@ -5,4 +5,6 @@ export {
 export {
   addFoodToPlan,
   calculateFood,
+  deleteFood,
+  deletePlan
 } from './plan';

@@ -14,6 +14,8 @@ class FoodPlan extends Component {
             foodPlan={this.props.foodPlan}
             summary={this.props.planSummary}
             calculateFood={this.props.calculateFood}
+            deleteFood={this.props.deleteFood}
+            deletePlan={this.props.deletePlan}
           /> : null}
       </section>
     );
@@ -29,7 +31,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    calculateFood: (foodKey, newWeight) => dispatch(actions.calculateFood(foodKey, newWeight))
+    calculateFood: (foodKey, newWeight) => dispatch(actions.calculateFood(foodKey, newWeight)),
+    deleteFood: (foodId) => dispatch(actions.deleteFood(foodId)),
+    deletePlan: () => dispatch(actions.deletePlan())
   }
 };
 

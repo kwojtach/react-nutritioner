@@ -48,9 +48,6 @@ const reducer = (state = initialState, action) => {
     case (actionTypes.CALCULATE_FOOD_PLAN):
       const planWeight = state.foodPlan.reduce(((total, food) => total + parseFloat(food.weight)), 0);
       const proximatesWeight = [0,0,0,0];
-      state.foodPlan.map(food => {
-
-      });
       proximatesWeight.forEach((weight, index) => {
         state.foodPlan.map(food => proximatesWeight[index] += parseFloat(food.proximates[index]))
       });
@@ -61,6 +58,17 @@ const reducer = (state = initialState, action) => {
           weight: planWeight,
           proximates: proximatesWeight
         }
+      };
+    case (actionTypes.DELETE_FOOD):
+      const newFoodPlan = state.foodPlan.filter(food => food.id !== action.foodId);
+      return {
+        ...state,
+        foodPlan: newFoodPlan
+      };
+    case (actionTypes.DELETE_PLAN):
+      return {
+        ...state,
+        foodPlan: []
       };
     default:
       return state
